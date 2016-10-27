@@ -19,29 +19,31 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        stopRecordingButton.isEnabled = false
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        configureButtons(recording: false)
     }
 
     @IBAction func recordAudio(_ sender: AnyObject) {
-        recordingLabel.text = "Recording in progress"
-        recordButton.isEnabled = false
-        stopRecordingButton.isEnabled = true
+        configureButtons(recording: true)
         
         startRecordingAudio()
     }
 
     @IBAction func stopRecording(_ sender: AnyObject) {
-        recordingLabel.text = "Tap to Record"
-        recordButton.isEnabled = true
-        stopRecordingButton.isEnabled = false
+        configureButtons(recording: false)
         
         stopRecordingAudio()
+    }
+    
+    func configureButtons(recording: Bool){
+        if (recording){
+            recordingLabel.text = "Recording in progress"
+            recordButton.isEnabled = false
+            stopRecordingButton.isEnabled = true
+        } else {
+            recordingLabel.text = "Tap to Record"
+            recordButton.isEnabled = true
+            stopRecordingButton.isEnabled = false
+        }
     }
     
     func startRecordingAudio(){
@@ -72,8 +74,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         if (flag){
             self.performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
         } else {
-            //Write out failure to user
-            
+            //Failed to record
         }
         
     }
