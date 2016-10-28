@@ -199,7 +199,7 @@
 				TargetAttributes = {
 					0A1F3EF81DBEED6C00D3E553 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 67V45KLZP6;
+						DevelopmentTeam = K9T59C7GGA;
 						ProvisioningStyle = Automatic;
 					};
 					0A1F3F0C1DBEED6C00D3E553 = {
@@ -421,7 +421,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 67V45KLZP6;
+				DEVELOPMENT_TEAM = K9T59C7GGA;
 				INFOPLIST_FILE = "Pitch Perfect/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.peterkhotpanya.Pitch-Perfect";
@@ -434,7 +434,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 67V45KLZP6;
+				DEVELOPMENT_TEAM = K9T59C7GGA;
 				INFOPLIST_FILE = "Pitch Perfect/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.peterkhotpanya.Pitch-Perfect";

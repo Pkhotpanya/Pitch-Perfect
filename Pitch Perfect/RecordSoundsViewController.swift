@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RecordSoundsViewController.swift
 //  Pitch Perfect
 //
 //  Created by Peter Khotpanya on 10/24/16.
@@ -72,9 +72,12 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if (flag){
-            self.performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
+            performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
         } else {
             //Failed to record
+            let alert=UIAlertController(title: "Failed to record audio", message: "", preferredStyle: UIAlertControllerStyle.alert);
+            //show it
+            show(alert, sender: self);
         }
         
     }
